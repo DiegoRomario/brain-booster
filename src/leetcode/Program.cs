@@ -2,4 +2,6 @@
 
 using leetcode;
 
-Problem.TwoSum([1, 2, 4, 8, 20], 12);
+var result = Problem.IsPalindrome(1221);
+
+Console.WriteLine(result);
