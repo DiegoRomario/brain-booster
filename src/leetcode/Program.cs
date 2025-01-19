@@ -2,6 +2,6 @@
 
 using leetcode;
 
-var result = Problem.RomanToInt("LIV");
+var result = Problem.LongestCommonPrefix(["flower", "flow", "flight"]);
 
 Console.WriteLine(result);
