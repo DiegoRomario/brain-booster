@@ -2,6 +2,6 @@
 
 using leetcode;
 
-var result = Problem.IsPalindrome(1221);
+var result = Problem.RomanToInt("LIV");
 
 Console.WriteLine(result);
