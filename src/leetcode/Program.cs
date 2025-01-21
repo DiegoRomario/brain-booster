@@ -2,6 +2,6 @@
 
 using leetcode;
 
-var result = Problem.LongestCommonPrefix(["flower", "flow", "flight"]);
 
+var result = Problem.IsValid("((");
 Console.WriteLine(result);
