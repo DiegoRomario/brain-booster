@@ -1,6 +1,2 @@
-﻿
-
-using leetcode;
-
-var result = Problem.LengthOfLastWord("Hello World");
+﻿var result = Problem.PlusOne([9, 9, 9]);
 Console.WriteLine(result);
