@@ -1,2 +1,2 @@
-﻿var result = Problem.PlusOne([9, 9, 9]);
+﻿var result = Problem.AddBinary("1010", "1011");
 Console.WriteLine(result);
