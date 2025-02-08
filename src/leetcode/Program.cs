@@ -1,2 +1,2 @@
-﻿var result = Problem.AddBinary("1010", "1011");
+﻿var result = Problem.MySqrt(144);
 Console.WriteLine(result);
