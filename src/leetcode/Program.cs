@@ -1,2 +1,2 @@
-﻿var result = Problem.MySqrt(144);
+﻿var result = Problem.ClimbStairs(144);
 Console.WriteLine(result);
