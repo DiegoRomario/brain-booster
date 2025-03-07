@@ -1,15 +1,12 @@
 ﻿using static Problem;
 
-TreeNode root = new(1,
-    new(2,
-        new(3),
-        new(4)
-    ),
-    new(2,
-        new(4),
-        new(3)
+TreeNode root = new(3,
+    new TreeNode(9),
+    new TreeNode(20,
+        new TreeNode(15),
+        new TreeNode(7)
     )
 );
 
 
-Problem.IsSymmetric(root);
+Problem.MaxDepth(root);
