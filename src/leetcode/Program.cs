@@ -1,12 +1,4 @@
-﻿using static Problem;
+﻿int[] nums = [9, 6, 4, 2, 3, 5, 7, 0, 1];
+var response = Problem.MissingNumber(nums);
 
-TreeNode root = new(3,
-    new TreeNode(9),
-    new TreeNode(20,
-        new TreeNode(15),
-        new TreeNode(7)
-    )
-);
-
-
-Problem.MaxDepth(root);
+Console.WriteLine(response);
