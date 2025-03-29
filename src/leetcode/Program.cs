@@ -1,4 +1,9 @@
-﻿int[] nums = [9, 6, 4, 2, 3, 5, 7, 0, 1];
-var response = Problem.MissingNumber(nums);
+﻿int[] nums = [9, 4, 9, 8, 4];
+int[] nums2 = [4, 9, 5];
 
-Console.WriteLine(response);
+var result = Problem.Intersect(nums, nums2);
+
+foreach (int number in result)
+{
+    Console.WriteLine(number);
+}
