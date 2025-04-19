@@ -1,11 +1,20 @@
 ﻿using primeagen;
 
-int[] arr =
- [9, 7, 3, 2, 1, 8, 4, 5];
+string[] maze = [
+            "xxxxxxxxxx x",
+            "xxxxxxxxxx x",
+            "xxxxxxxxxx x",
+            "xxxxxxxxxx x",
+            "x          x",
+            "x xxxxxxxxxx",
+        ];
 
-int[] result = Problem.BubbleSort(arr);
+var start = new Point(10, 0);
+var end = new Point(1, 5);
 
-foreach (int number in result)
+var path = Problem.MazeSolver(maze, 'x', start, end);
+
+foreach (var p in path)
 {
-    Console.WriteLine(number);
+    Console.WriteLine(p);
 }
