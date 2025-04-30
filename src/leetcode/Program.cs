@@ -1,9 +1,11 @@
-﻿int[] nums = [9, 4, 9, 8, 4];
-int[] nums2 = [4, 9, 5];
+﻿// Example array to sort
+int[] arr = { 4, 7, 3, 2, 1, 8, 6, 5 };
 
-var result = Problem.Intersect(nums, nums2);
+// Display the array before sorting
+Console.WriteLine("Before QuickSort: " + string.Join(", ", arr));
 
-foreach (int number in result)
-{
-    Console.WriteLine(number);
-}
+// Call the QuickSort method
+Problem.SortColors(arr);
+
+// Display the array after sorting
+Console.WriteLine("After QuickSort: " + string.Join(", ", arr));
