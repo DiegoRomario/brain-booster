@@ -1,20 +1,13 @@
 ﻿using primeagen;
 
-string[] maze = [
-            "xxxxxxxxxx x",
-            "xxxxxxxxxx x",
-            "xxxxxxxxxx x",
-            "xxxxxxxxxx x",
-            "x          x",
-            "x xxxxxxxxxx",
-        ];
+// Example array to sort
+int[] arr = { 4, 7, 3, 2, 1, 8, 6, 5 };
 
-var start = new Point(10, 0);
-var end = new Point(1, 5);
+// Display the array before sorting
+Console.WriteLine("Before QuickSort: " + string.Join(", ", arr));
 
-var path = Problem.MazeSolver(maze, 'x', start, end);
+// Call the QuickSort method
+Problem.QuickSort(arr);
 
-foreach (var p in path)
-{
-    Console.WriteLine(p);
-}
+// Display the array after sorting
+Console.WriteLine("After QuickSort: " + string.Join(", ", arr));
