@@ -1,13 +1,34 @@
-﻿using primeagen;
+﻿// Example binary tree:
+//        1
+//       / \
+//      2   3
+//     / \   \
+//    4   5   6
 
-// Example array to sort
-int[] arr = { 4, 7, 3, 2, 1, 8, 6, 5 };
+using static primeagen.Problem;
 
-// Display the array before sorting
-Console.WriteLine("Before QuickSort: " + string.Join(", ", arr));
+var tree = new BinaryNode<int>(
+    1,
+    new BinaryNode<int>(
+        2,
+        new BinaryNode<int>(4),
+        new BinaryNode<int>(5)
+    ),
+    new BinaryNode<int>(
+        3,
+        null,
+        new BinaryNode<int>(6)
+    )
+);
 
-// Call the QuickSort method
-Problem.QuickSort(arr);
+Console.WriteLine("Pre-Order Recursive:   " + string.Join(", ", PreOrderRecursive(tree)));
+Console.WriteLine("Pre-Order Iterative:   " + string.Join(", ", PreOrderIterative(tree)));
 
-// Display the array after sorting
-Console.WriteLine("After QuickSort: " + string.Join(", ", arr));
+Console.WriteLine("In-Order Recursive:    " + string.Join(", ", InOrderRecursive(tree)));
+Console.WriteLine("In-Order Iterative:    " + string.Join(", ", InOrderIterative(tree)));
+
+Console.WriteLine("Post-Order Recursive:  " + string.Join(", ", PostOrderRecursive(tree)));
+Console.WriteLine("Post-Order Iterative:  " + string.Join(", ", PostOrderIterative(tree)));
+
+Console.WriteLine("Search 5:  " + string.Join(", ", DFS(tree, 3)));
+Console.WriteLine("Search 7:  " + string.Join(", ", DFS(tree, 7)));
