@@ -1,34 +1,45 @@
-﻿// Example binary tree:
-//        1
-//       / \
-//      2   3
-//     / \   \
-//    4   5   6
+﻿using primeagen;
 
-using static primeagen.Problem;
+MinHeap minHeap = new();
 
-var tree = new BinaryNode<int>(
-    1,
-    new BinaryNode<int>(
-        2,
-        new BinaryNode<int>(4),
-        new BinaryNode<int>(5)
-    ),
-    new BinaryNode<int>(
-        3,
-        null,
-        new BinaryNode<int>(6)
-    )
-);
+Console.WriteLine("Inserting values: 5, 3, 8, 1, 2");
+minHeap.Insert(5);
+minHeap.Insert(3);
+minHeap.Insert(8);
+minHeap.Insert(1);
+minHeap.Insert(2);
 
-Console.WriteLine("Pre-Order Recursive:   " + string.Join(", ", PreOrderRecursive(tree)));
-Console.WriteLine("Pre-Order Iterative:   " + string.Join(", ", PreOrderIterative(tree)));
+Console.WriteLine($"Heap Length: {minHeap.Length}");
 
-Console.WriteLine("In-Order Recursive:    " + string.Join(", ", InOrderRecursive(tree)));
-Console.WriteLine("In-Order Iterative:    " + string.Join(", ", InOrderIterative(tree)));
+Console.WriteLine("Deleting elements (should come out in ascending order):");
 
-Console.WriteLine("Post-Order Recursive:  " + string.Join(", ", PostOrderRecursive(tree)));
-Console.WriteLine("Post-Order Iterative:  " + string.Join(", ", PostOrderIterative(tree)));
+while (minHeap.Length > 0)
+{
+    int minValue = minHeap.Delete();
+    Console.WriteLine(minValue);
+}
 
-Console.WriteLine("Search 5:  " + string.Join(", ", DFS(tree, 3)));
-Console.WriteLine("Search 7:  " + string.Join(", ", DFS(tree, 7)));
+Console.WriteLine("Heap is empty now.");
+
+Console.WriteLine(new string('_', 40));
+Console.WriteLine();
+
+MaxHeap maxHeap = new();
+
+Console.WriteLine("Inserting values: 5, 3, 8, 1, 2");
+maxHeap.Insert(5);
+maxHeap.Insert(3);
+maxHeap.Insert(8);
+maxHeap.Insert(1);
+maxHeap.Insert(2);
+
+Console.WriteLine($"Heap Length: {maxHeap.Length}");
+
+Console.WriteLine("Deleting elements (should come out in descending order):");
+while (maxHeap.Length > 0)
+{
+    int maxValue = maxHeap.Delete();
+    Console.WriteLine(maxValue);
+}
+
+Console.WriteLine("Heap is empty now.");
