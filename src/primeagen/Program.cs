@@ -1,38 +1,31 @@
-﻿using primeagen;
-using static primeagen.Problem;
+﻿using static primeagen.Problem;
 
-// Graph structure:
-//
-// (0) --> (1) --> (3)
-//  |        |
-//  |        v
-//  v       (4) --> (5)
-// (2) --------^
-//
-// Edges:
-// 0 -> 1 (weight 3), 0 -> 2 (weight 1)
-// 1 -> 3 (weight 4), 1 -> 4 (weight 2)
-// 2 -> 5 (weight 2)
-// 4 -> 5 (weight 1)
-//
+// Larger Graph Example:
+// Graph (Adjacency Matrix):
+//   0 -> 1 -> 2 -> 3
+//   |           \
+//   v             v    
+//   4 -> 5 -> 6 -> 7 -> 8
 
-var graph = new WeightedEdge[][]
-{
-            [new (1, 3), new (2, 1)],
-            [ new (3, 4), new (4, 2)],
-            [ new (5, 2)],
-            [],
-            [new (5, 1)],
-            []
-};
+int[][] graph =
+[
+            [0, 1, 0, 0, 1, 0, 0, 0, 0], // Node 0: connected to 1 and 4
+            [0, 0, 1, 0, 0, 0, 0, 0, 0], // Node 1: connected to 2
+            [0, 0, 0, 1, 0, 0, 0, 1, 0], // Node 2: connected to 3 and 7
+            [0, 0, 0, 0, 0, 0, 0, 0, 0], // Node 3: no outgoing edges
+            [0, 0, 0, 0, 0, 1, 0, 0, 0], // Node 4: connected to 5
+            [0, 0, 0, 0, 0, 0, 1, 0, 0], // Node 5: connected to 6
+            [0, 0, 0, 0, 0, 0, 0, 1, 0], // Node 6: connected to 7
+            [0, 0, 0, 0, 0, 0, 0, 0, 1], // Node 7: connected to 8
+            [0, 0, 0, 0, 0, 0, 0, 0, 0], // Node 8: no outgoing edges
+];
 
-// 🖨️ Print the graph first
-PrintGraph(graph);
 
+// Let's say we want to find the path from node 0 to node 8
 int source = 0;
-int needle = 5;
+int needle = 8;
 
-var path = Problem.Dfs(graph, source, needle);
+var path = Bfs(graph, source, needle);
 
 if (path != null)
 {
@@ -42,17 +35,4 @@ if (path != null)
 else
 {
     Console.WriteLine("\nNo path found.");
-}
-static void PrintGraph(Problem.WeightedEdge[][] graph)
-{
-    for (int i = 0; i < graph.Length; i++)
-    {
-        Console.Write($"Node {i}: ");
-        var edges = graph[i];
-        for (int j = 0; j < edges.Length; j++)
-        {
-            Console.Write($"(to: {edges[j].To}, weight: {edges[j].Weight}) ");
-        }
-        Console.WriteLine();
-    }
 }
