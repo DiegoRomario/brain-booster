@@ -1,45 +1,58 @@
 ﻿using primeagen;
+using static primeagen.Problem;
 
-MinHeap minHeap = new();
+// Graph structure:
+//
+// (0) --> (1) --> (3)
+//  |        |
+//  |        v
+//  v       (4) --> (5)
+// (2) --------^
+//
+// Edges:
+// 0 -> 1 (weight 3), 0 -> 2 (weight 1)
+// 1 -> 3 (weight 4), 1 -> 4 (weight 2)
+// 2 -> 5 (weight 2)
+// 4 -> 5 (weight 1)
+//
 
-Console.WriteLine("Inserting values: 5, 3, 8, 1, 2");
-minHeap.Insert(5);
-minHeap.Insert(3);
-minHeap.Insert(8);
-minHeap.Insert(1);
-minHeap.Insert(2);
-
-Console.WriteLine($"Heap Length: {minHeap.Length}");
-
-Console.WriteLine("Deleting elements (should come out in ascending order):");
-
-while (minHeap.Length > 0)
+var graph = new WeightedEdge[][]
 {
-    int minValue = minHeap.Delete();
-    Console.WriteLine(minValue);
-}
+            [new (1, 3), new (2, 1)],
+            [ new (3, 4), new (4, 2)],
+            [ new (5, 2)],
+            [],
+            [new (5, 1)],
+            []
+};
 
-Console.WriteLine("Heap is empty now.");
+// 🖨️ Print the graph first
+PrintGraph(graph);
 
-Console.WriteLine(new string('_', 40));
-Console.WriteLine();
+int source = 0;
+int needle = 5;
 
-MaxHeap maxHeap = new();
+var path = Problem.Dfs(graph, source, needle);
 
-Console.WriteLine("Inserting values: 5, 3, 8, 1, 2");
-maxHeap.Insert(5);
-maxHeap.Insert(3);
-maxHeap.Insert(8);
-maxHeap.Insert(1);
-maxHeap.Insert(2);
-
-Console.WriteLine($"Heap Length: {maxHeap.Length}");
-
-Console.WriteLine("Deleting elements (should come out in descending order):");
-while (maxHeap.Length > 0)
+if (path != null)
 {
-    int maxValue = maxHeap.Delete();
-    Console.WriteLine(maxValue);
+    Console.WriteLine("\nPath found:");
+    Console.WriteLine(string.Join(" -> ", path));
 }
-
-Console.WriteLine("Heap is empty now.");
+else
+{
+    Console.WriteLine("\nNo path found.");
+}
+static void PrintGraph(Problem.WeightedEdge[][] graph)
+{
+    for (int i = 0; i < graph.Length; i++)
+    {
+        Console.Write($"Node {i}: ");
+        var edges = graph[i];
+        for (int j = 0; j < edges.Length; j++)
+        {
+            Console.Write($"(to: {edges[j].To}, weight: {edges[j].Weight}) ");
+        }
+        Console.WriteLine();
+    }
+}
