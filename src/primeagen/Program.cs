@@ -1,38 +1,30 @@
-﻿using static primeagen.Problem;
-
-// Larger Graph Example:
-// Graph (Adjacency Matrix):
-//   0 -> 1 -> 2 -> 3
-//   |           \
-//   v             v    
-//   4 -> 5 -> 6 -> 7 -> 8
-
-int[][] graph =
-[
-            [0, 1, 0, 0, 1, 0, 0, 0, 0], // Node 0: connected to 1 and 4
-            [0, 0, 1, 0, 0, 0, 0, 0, 0], // Node 1: connected to 2
-            [0, 0, 0, 1, 0, 0, 0, 1, 0], // Node 2: connected to 3 and 7
-            [0, 0, 0, 0, 0, 0, 0, 0, 0], // Node 3: no outgoing edges
-            [0, 0, 0, 0, 0, 1, 0, 0, 0], // Node 4: connected to 5
-            [0, 0, 0, 0, 0, 0, 1, 0, 0], // Node 5: connected to 6
-            [0, 0, 0, 0, 0, 0, 0, 1, 0], // Node 6: connected to 7
-            [0, 0, 0, 0, 0, 0, 0, 0, 1], // Node 7: connected to 8
-            [0, 0, 0, 0, 0, 0, 0, 0, 0], // Node 8: no outgoing edges
-];
+﻿using primeagen;
 
 
-// Let's say we want to find the path from node 0 to node 8
-int source = 0;
-int needle = 8;
+var graph = BuildGraph();
+var path = Dijkstra.DijkstraList(0, 6, graph);
 
-var path = Bfs(graph, source, needle);
-
-if (path != null)
-{
-    Console.WriteLine("\nPath found:");
-    Console.WriteLine(string.Join(" -> ", path));
-}
+if (path == null)
+    Console.WriteLine("No path found.");
 else
+    Console.WriteLine(string.Join(" -> ", path));
+
+
+static List<GraphEdge>[] BuildGraph()
 {
-    Console.WriteLine("\nNo path found.");
+    var list = new List<GraphEdge>[7];
+
+    for (int i = 0; i < list.Length; i++)
+        list[i] = [];
+
+    list[0].AddRange([new GraphEdge(1, 3), new GraphEdge(2, 1)]);
+    list[1].AddRange([new GraphEdge(0, 3), new GraphEdge(2, 4), new GraphEdge(4, 1)]);
+    list[2].AddRange([new GraphEdge(0, 1), new GraphEdge(1, 4)]);
+    list[3].AddRange([new GraphEdge(4, 5), new GraphEdge(6, 1)]);
+    list[4].AddRange([new GraphEdge(1, 1), new GraphEdge(3, 5), new GraphEdge(5, 2)]);
+    list[5].AddRange([new GraphEdge(4, 2), new GraphEdge(6, 1)]);
+    list[6].AddRange([new GraphEdge(3, 1), new GraphEdge(5, 1)]);
+
+    return list;
 }
+
