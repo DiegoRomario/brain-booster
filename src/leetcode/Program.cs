@@ -1,11 +1,3 @@
-﻿// Example array to sort
-int[] arr = { 4, 7, 3, 2, 1, 8, 6, 5 };
-
-// Display the array before sorting
-Console.WriteLine("Before QuickSort: " + string.Join(", ", arr));
-
-// Call the QuickSort method
-Problem.SortColors(arr);
-
-// Display the array after sorting
-Console.WriteLine("After QuickSort: " + string.Join(", ", arr));
+﻿
+var response = Problem.Search([1,2,3,4,5,6,7,8,9,10], 7);
+Console.WriteLine(response);
