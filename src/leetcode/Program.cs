@@ -1,2 +1,5 @@
 ﻿
-Problem.MoveZeroes([0,1,0,3,12]);
+using static leetcode.Problem;
+
+var head = new ListNode(1, new ListNode(2, new ListNode(3)));
+Problem.ReverseListRecursive(head);
