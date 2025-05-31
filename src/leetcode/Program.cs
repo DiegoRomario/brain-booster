@@ -1,19 +1,7 @@
 ﻿
 using static Problem;
 
-// Level 3
-TreeNode leftLeft = new TreeNode(4);
-TreeNode leftRight = new TreeNode(5);
-TreeNode rightLeft = new TreeNode(6);
-TreeNode rightRight = new TreeNode(7);
-
-// Level 2
-TreeNode left = new TreeNode(2, leftLeft, leftRight);
-TreeNode right = new TreeNode(3, rightLeft, rightRight);
-
-// Level 1 (Root)
-TreeNode root = new TreeNode(1, left, right);
-var result = InvertTree(root);
+var response = IslandPerimeter([[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]);
 Console.ReadKey();
 
 
