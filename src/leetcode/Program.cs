@@ -1,6 +1,6 @@
 ﻿
 using static Problem;
 
-var result = FindTheCity(4,[ [0, 1, 3], [1, 2, 1], [1, 3, 4], [2, 3, 1]], 4);
+var result = AllPathsSourceTarget([[1, 2], [3], [3], []]);
 Console.WriteLine(result);
 Console.ReadKey();
