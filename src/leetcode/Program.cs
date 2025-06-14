@@ -1,1 +1,1 @@
-﻿var result = Problem.Generate(5);
+﻿var result = Problem.BuildArray([0, 2, 1, 5, 3, 4]);
