@@ -1,2 +1,2 @@
-﻿Problem.MinTimeToType("azb");
+﻿Problem.AllPossibleFBT(5);
 Console.ReadKey();
