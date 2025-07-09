@@ -1,2 +1,2 @@
-﻿Problem.AllPossibleFBT(5);
+﻿Problem.Fib(13);
 Console.ReadKey();
