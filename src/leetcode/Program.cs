@@ -1,2 +1,2 @@
-﻿Problem.ReverseOnlyLetters("a-bC-dEf-ghIj");
+﻿Problem.ReversePrefix("abcdef", 'd');
 Console.ReadKey();
