@@ -1,2 +1,2 @@
-﻿Problem.FrequencySort("Tabata");
+﻿Problem.FindMaxAverage([1, 12, -5, -6, 50, 3],4);
 Console.ReadKey();
