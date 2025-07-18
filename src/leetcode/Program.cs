@@ -1,2 +1,2 @@
-﻿Problem.CombinationSum([2, 3, 6, 7], 7);
+﻿Problem.CombinationSum2([10, 1, 2, 7, 6, 1, 5], 8);
 Console.ReadKey();
