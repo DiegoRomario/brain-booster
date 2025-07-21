@@ -1,2 +1,2 @@
-﻿Problem.CombinationSum2([10, 1, 2, 7, 6, 1, 5], 8);
+﻿Problem.MaxProfit([1, 3, 7, 5, 10, 3], 3);
 Console.ReadKey();
