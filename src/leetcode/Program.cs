@@ -1,2 +1,2 @@
-﻿Problem.MaxProfit([1, 3, 7, 5, 10, 3], 3);
+﻿Problem.MinCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]);
 Console.ReadKey();
