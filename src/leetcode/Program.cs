@@ -1,2 +1,2 @@
-﻿Problem.MinCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]);
+﻿Problem.LongestCommonSubsequence("abcde","ace");
 Console.ReadKey();
