@@ -1,2 +1,2 @@
-﻿Problem.CountBits(10);
+﻿Problem.MinBitFlips(16,4);
 Console.ReadKey();
