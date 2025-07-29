@@ -1,2 +1,2 @@
-﻿Problem.SuccessfulPairs([5, 1, 3], [1, 2, 3, 4, 5],  7);
+﻿Problem.MinEatingSpeed([4, 8, 3, 9], 7);
 Console.ReadKey();
