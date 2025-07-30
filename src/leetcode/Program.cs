@@ -1,2 +1,2 @@
-﻿Problem.MinEatingSpeed([4, 8, 3, 9], 7);
+﻿Problem.CountNegatives([[4, 3, 2, -1]]);
 Console.ReadKey();
