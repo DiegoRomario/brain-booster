@@ -1,2 +1,2 @@
-﻿Problem.LongestSubarray([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]);
+﻿Problem.UniqueOccurrences([1, 2, 2, 1, 1, 3]);
 Console.ReadKey();
