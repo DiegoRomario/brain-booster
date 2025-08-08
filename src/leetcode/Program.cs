@@ -1,2 +1,2 @@
-﻿Problem.EqualPairs([[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]]);
+﻿Problem.GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
 Console.ReadKey();
