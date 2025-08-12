@@ -1,2 +1,2 @@
-﻿Problem.TimeRequiredToBuy([2, 3, 2], 2);
+﻿Problem.FindTheWinner(5,2);
 Console.ReadKey();
