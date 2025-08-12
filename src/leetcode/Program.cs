@@ -1,6 +1,2 @@
-﻿var counter = new Problem.RecentCounter();
-Console.WriteLine(counter.Ping(1));
-Console.WriteLine(counter.Ping(100));
-Console.WriteLine(counter.Ping(3001));
-Console.WriteLine(counter.Ping(3002));
+﻿Problem.TimeRequiredToBuy([2, 3, 2], 2);
 Console.ReadKey();
