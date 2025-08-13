@@ -1,2 +1,2 @@
-﻿Problem.FindTheWinner(5,2);
+﻿Problem.RemoveStars("leet**cod*e");
 Console.ReadKey();
