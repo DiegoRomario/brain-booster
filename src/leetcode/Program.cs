@@ -1,6 +1,13 @@
-﻿ListNode node4 = new (4, null);
-ListNode node3 = new (3, node4);
-ListNode node2 = new (2, node3);
-ListNode head = new (1, node2);
-Problem.InsertGreatestCommonDivisors(head);
+﻿using System.Xml.Linq;
+using static Problem;
+
+
+
+Node node2 = new() { val = 2, next = null, child = null  };
+Node node3 = new() { val = 3, child = null, next = null };
+Node head = new() { val = 1, next = node2, child = node3 };
+node2.prev = head;
+node3.prev = head;
+
+Problem.Flatten(head);
 Console.ReadKey();
