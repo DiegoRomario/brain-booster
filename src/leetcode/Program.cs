@@ -1,13 +1,20 @@
-﻿using System.Xml.Linq;
-using static Problem;
+﻿using static Problem;
 
 
+TreeNode root = new(3,
+    new TreeNode(5,
+        new TreeNode(6),
+        new TreeNode(2,
+            new TreeNode(7),
+            new TreeNode(4)
+        )
+    ),
+    new TreeNode(1,
+        new TreeNode(9),
+        new TreeNode(8)
+    )
+);
 
-Node node2 = new() { val = 2, next = null, child = null  };
-Node node3 = new() { val = 3, child = null, next = null };
-Node head = new() { val = 1, next = node2, child = node3 };
-node2.prev = head;
-node3.prev = head;
 
-Problem.Flatten(head);
+LeafSimilar(root, root);
 Console.ReadKey();
