@@ -1,20 +1,6 @@
 ﻿using static Problem;
 
+Node2 root = new(3, []);
 
-TreeNode root = new(3,
-    new TreeNode(2,
-        new TreeNode(1),
-        new TreeNode(2,
-            new TreeNode(1),
-            new TreeNode(0)
-        )
-    ),
-    new TreeNode(2,
-        new TreeNode(1),
-        new TreeNode(0)
-    )
-);
-
-
-EvaluateTree(root);
+Postorder(root);
 Console.ReadKey();
