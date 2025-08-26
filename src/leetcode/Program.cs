@@ -2,5 +2,5 @@
 
 Node2 root = new(3, []);
 
-Postorder(root);
+Preorder(root);
 Console.ReadKey();
