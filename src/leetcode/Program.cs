@@ -1,6 +1,8 @@
 ﻿using static Problem;
 
-TreeNode root = new(3);
+TreeNode left = new(3);
+TreeNode right = new(3);
+TreeNode root = new(3, left, right);
 
-GoodNodes(root);
+LowestCommonAncestor(root, left, right);
 Console.ReadKey();
