@@ -1,6 +1,6 @@
 ﻿using static Problem;
 
-Node2 root = new(3, []);
+TreeNode root = new(3);
 
-Preorder(root);
+GoodNodes(root);
 Console.ReadKey();
