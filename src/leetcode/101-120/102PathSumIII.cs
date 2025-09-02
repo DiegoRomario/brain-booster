@@ -1,6 +1,6 @@
 ﻿internal static partial class Problem
 {
-    public static int PathSum(TreeNode root, int targetSum)
+    public static int PathSum3(TreeNode root, int targetSum)
     {
         int paths;       
         paths = 0;

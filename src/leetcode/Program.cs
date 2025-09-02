@@ -1,8 +1,22 @@
 ﻿using static Problem;
 
-TreeNode left = new(3);
-TreeNode right = new(3);
-TreeNode root = new(3, left, right);
+TreeNode root = new TreeNode(5,
+    new TreeNode(4,
+        new TreeNode(11,
+            new TreeNode(7),
+            new TreeNode(2)
+        ),
+        null
+    ),
+    new TreeNode(8,
+        new TreeNode(13),
+        new TreeNode(4,
+            new TreeNode(5),
+            new TreeNode(1)
+        )
+    )
+);
 
-PathSum(root, 1);
+
+PathSum2(root, 22);
 Console.ReadKey();
