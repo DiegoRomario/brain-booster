@@ -18,5 +18,5 @@ TreeNode root = new TreeNode(5,
 );
 
 
-HasPathSum(root, 22);
+RightSideView(root);
 Console.ReadKey();
