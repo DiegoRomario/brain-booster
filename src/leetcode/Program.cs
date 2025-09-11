@@ -18,5 +18,5 @@ TreeNode root = new TreeNode(5,
 );
 
 
-SearchBST(root,3);
+DeleteNode(root,3);
 Console.ReadKey();
