@@ -1,22 +1,10 @@
 ﻿using static Problem;
 
-TreeNode root = new TreeNode(5,
-    new TreeNode(4,
-        new TreeNode(11,
-            new TreeNode(7),
-            new TreeNode(2)
-        ),
-        null
-    ),
-    new TreeNode(8,
-        new TreeNode(13),
-        new TreeNode(4,
-            new TreeNode(5),
-            new TreeNode(1)
-        )
-    )
-);
+var rooms = new List<IList<int>>
+{
+    ([1, 2, 3, 4]),
+    ([1, 2, 3, 4])
+};
 
-
-DeleteNode(root,3);
+CanVisitAllRooms(rooms);
 Console.ReadKey();
