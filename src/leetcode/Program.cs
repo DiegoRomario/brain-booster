@@ -1,10 +1,6 @@
 ﻿using static Problem;
 
-var rooms = new List<IList<int>>
-{
-    ([1, 2, 3, 4]),
-    ([1, 2, 3, 4])
-};
+int[][] rooms = [[1, 2, 3, 4], [1, 2, 3, 4]];
 
-CanVisitAllRooms(rooms);
+FindCircleNum(rooms);
 Console.ReadKey();
